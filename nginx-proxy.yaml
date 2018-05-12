@@ -17,6 +17,8 @@ services:
       - html:/usr/share/nginx/html
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nextcloud/uploadsize.conf:/etc/nginx/conf.d/uploadsize.conf:ro
+    networks:
+      - default
 
   letsencrypt-companion:
     image: jrcs/letsencrypt-nginx-proxy-companion
@@ -27,6 +29,8 @@ services:
       - vhost.d:/etc/nginx/vhost.d
       - html:/usr/share/nginx/html
       - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - default
     depends_on:
       - proxy
 

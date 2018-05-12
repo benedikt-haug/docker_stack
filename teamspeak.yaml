@@ -13,3 +13,5 @@ services:
       - 30033:30033
     environment:
       TS3SERVER_LICENSE: accept
+    logging:
+      driver: none
