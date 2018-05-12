@@ -41,4 +41,3 @@ networks:
     external: true
   postgres_default:
     external: true
-

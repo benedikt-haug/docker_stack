@@ -2,7 +2,6 @@
 version: '3.5'
 
 services:
-
   app:
     image: nextcloud:fpm
     restart: always
@@ -13,8 +12,6 @@ services:
       - POSTGRES_PASSWORD=${ENV_POSTGRES_PASSWORD}
       - POSTGRES_HOST=postgres_db
       - NEXTCLOUD_ADMIN_USER=admin
-        #    depends_on:
-        #      - db
     networks:
       - default
 

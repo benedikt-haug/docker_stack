@@ -17,7 +17,7 @@ services:
       - html:/usr/share/nginx/html
       - /var/run/docker.sock:/tmp/docker.sock:ro
       - ./nextcloud/uploadsize.conf:/etc/nginx/conf.d/uploadsize.conf:ro
-  
+
   letsencrypt-companion:
     image: jrcs/letsencrypt-nginx-proxy-companion
     restart: always
