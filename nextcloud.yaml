@@ -23,7 +23,7 @@ services:
       - ./nextcloud/nginx.conf:/etc/nginx/nginx.conf:ro
     environment:
       - VIRTUAL_HOST=gnaswelt.de
-      - LETSENCRYPT_HOST=gnaswelt.de,ttrss.gnaswelt.de
+      - LETSENCRYPT_HOST=gnaswelt.de,ttrss.gnaswelt.de,gitlab.gnaswelt.de
       - LETSENCRYPT_EMAIL=${ENV_LETSENCRYPT_EMAIL}
     depends_on:
       - app
