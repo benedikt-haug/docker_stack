@@ -15,3 +15,18 @@ services:
       TS3SERVER_LICENSE: accept
     logging:
       driver: none
+
+  sinusbot:
+    image: sinusbot/docker
+    restart: always
+    ports:
+      - 8087:8087
+    volumes:
+      - /opt/sinusbot/scripts:/opt/sinusbot/scripts
+      - /opt/sinusbot/data:/opt/sinusbot/data
+    networks:
+     - mynetwork
+
+networks:
+    mynetwork:
+        driver: bridge
