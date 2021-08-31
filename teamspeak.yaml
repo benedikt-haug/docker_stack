@@ -3,6 +3,10 @@ version: '3.1'
 
 services:
   teamspeak:
+    deploy:
+      resources:
+        reservations:
+          cpus: "0.3"
     image: teamspeak
     restart: always
     volumes:
@@ -14,9 +18,13 @@ services:
     environment:
       TS3SERVER_LICENSE: accept
     logging:
-      driver: none
+      driver: "local"
 
   sinusbot:
+    deploy:
+      resources:
+        reservations:
+          cpus: "0.2"
     image: sinusbot/docker
     restart: always
     ports:
@@ -25,8 +33,4 @@ services:
       - /opt/sinusbot/scripts:/opt/sinusbot/scripts
       - /opt/sinusbot/data:/opt/sinusbot/data
     networks:
-     - mynetwork
-
-networks:
-    mynetwork:
-        driver: bridge
+      - default
