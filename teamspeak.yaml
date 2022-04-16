@@ -17,20 +17,6 @@ services:
       - 30033:30033
     environment:
       TS3SERVER_LICENSE: accept
-    logging:
-      driver: "local"
-
-  sinusbot:
-    deploy:
-      resources:
-        reservations:
-          cpus: "0.2"
-    image: sinusbot/docker
-    restart: always
-    ports:
-      - 8087:8087
-    volumes:
-      - /opt/sinusbot/scripts:/opt/sinusbot/scripts
-      - /opt/sinusbot/data:/opt/sinusbot/data
     networks:
       - default
+
