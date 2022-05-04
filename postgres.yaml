@@ -1,17 +1,17 @@
----
-version: '3.5'
-
-services:
-  db:
-    image: postgres:10
-    restart: unless-stopped
-    environment:
-      - POSTGRES_PASSWORD=${ENV_POSTGRES_PASSWORD}
-    volumes:
-      - db:/var/lib/postgresql/data
-
-volumes:
-  db:
-
-networks:
-  postgre:
+#---
+#version: '3.5'
+#
+#services:
+#  db:
+#    image: postgres:10
+#    restart: unless-stopped
+#    environment:
+#      - POSTGRES_PASSWORD=${ENV_POSTGRES_PASSWORD}
+#    volumes:
+#      - db:/var/lib/postgresql/data
+#
+#volumes:
+#  db:
+#
+#networks:
+#  postgre:

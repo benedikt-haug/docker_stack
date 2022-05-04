@@ -17,6 +17,8 @@ services:
       - 30033:30033
     environment:
       TS3SERVER_LICENSE: accept
+      LETSENCRYPT_HOST: gnaswelt.de,ttrss.gnaswelt.de,gitlab.gnaswelt.de
+      LETSENCRYPT_EMAIL: ${ENV_LETSENCRYPT_EMAIL}
     networks:
       - default
 

@@ -10,6 +10,7 @@ services:
       - 443:443
     labels:
       com.github.jrcs.letsencrypt_nginx_proxy_companion.nginx_proxy: "true"
+    environment:
     volumes:
       - certs:/etc/nginx/certs:ro
       - conf.d:/etc/nginx/conf.d
